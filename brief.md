@@ -16,11 +16,17 @@ OWASP MASVS is an industry standard that lists security requirements for Android
 
 Resource: OWASP Mobile Application Security Verification Standard (MASVS) - https://mas.owasp.org/MASVS/
 ## Networking
+BGP lets networks announce which IP prefixes they can reach, but nothing in it checks that an announcement is true. A hijacker can announce someone else's prefix, and neighboring networks may send traffic to the wrong place. RPKI lets holders publish signed Route Origin Authorizations naming which AS may originate a prefix, so routers can validate origins. RPKI doesn't validate the AS path, so it doesn't stop path manipulation or route leaks.
 
+Resource: RFC 6811 - BGP Prefix Origin Validation - https://www.rfc-editor.org/rfc/rfc6811
 ## Cybersecurity
+Log4Shell was a critical remote code execution flaw in Apache Log4j 2, a common Java logging library. When it logged attacker-controlled text containing a JNDI lookup string, it could load and run code from a remote server. It was rated severe (CVSS 10.0) because it was easy to exploit, needed no login, and affected many products. It was fixed by updating Log4j: 2.15.0 limited the behavior, and later releases such as 2.16.0 disabled JNDI by default.
 
+Resource: NVD - CVE-2021-44228 Detail - https://nvd.nist.gov/vuln/detail/CVE-2021-44228
 ## Data
+A Software Bill of Materials is a formal, machine-readable inventory of the components in a piece of software and their relationships, like an ingredients list. It helps organisations find affected products quickly when a vulnerability is announced. The NTIA minimum data fields are: supplier name, component name, version of the component, other unique identifiers, dependency relationship, author of the SBOM data, and timestamp.
 
+Resource: NTIA - The Minimum Elements For a Software Bill of Materials (SBOM) - https://www.ntia.gov/report/2021/minimum-elements-software-bill-materials-sbom
 ## Misconception in My Track
 
 ## Open Question
