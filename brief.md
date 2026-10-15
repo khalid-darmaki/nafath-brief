@@ -28,5 +28,6 @@ A Software Bill of Materials is a formal, machine-readable inventory of the comp
 
 Resource: NTIA - The Minimum Elements For a Software Bill of Materials (SBOM) - https://www.ntia.gov/report/2021/minimum-elements-software-bill-materials-sbom
 ## Misconception in My Track
-
+A common belief is that an SBOM is a list of known vulnerabilities. It is not. An SBOM is an inventory of the components inside software, with supplier, name, version, and relationships. Vulnerabilities are matched against that inventory separately, using vulnerability databases. This separation lets the same SBOM be checked again whenever a new flaw is announced. The proof is the definition and baseline component information in the NTIA minimum elements report.
 ## Open Question
+How can an organization automatically match SBOMs to new vulnerability announcements, and how reliable is that matching in practice?
